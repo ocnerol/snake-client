@@ -13,6 +13,7 @@ const connect = function () {
 
     console.log('Successfully connected to the server!');
     conn.write('Name: LRN');
+    conn.write('Move: up');
 
   });
 
