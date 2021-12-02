@@ -13,8 +13,11 @@ const connect = function () {
 
     console.log('Successfully connected to the server!');
     conn.write('Name: LRN');
-    conn.write('Move: up');
-
+    // let delay = 1000;
+    // setInterval(() => {
+    //   conn.write('Move: down');
+    //   delay += 500;
+    // }, delay);
   });
 
   // interpret incoming data as text
