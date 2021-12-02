@@ -11,11 +11,12 @@ const setupInput = function(conn) {
   stdin.setEncoding("utf8");
   stdin.resume();
 
+  
   const handleUserInput = (key) => {
     if (key === '\u0003') {
       process.exit();
     }
-
+    connection.write(`Say: HelloWorld`);
     switch (key) {
       case 'w': {
         connection.write('Move: up');
@@ -36,7 +37,7 @@ const setupInput = function(conn) {
         connection.write('Move: right');
         break;
       }
-    }
+    }   
   };
 
 stdin.on('data', handleUserInput);
